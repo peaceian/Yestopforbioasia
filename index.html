@@ -552,6 +552,71 @@
         font-size: 14px;
       }
     }
+      /* 手機版改為卡片式顯示 */
+@media (max-width: 768px) {
+
+    .product-map-table thead {
+        display: none;
+    }
+
+    .product-map-table,
+    .product-map-table tbody,
+    .product-map-table tr,
+    .product-map-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .product-map-table tr {
+        margin-bottom: 18px;
+        border-radius: 14px;
+        background: #ffffff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        overflow: hidden;
+    }
+
+    .product-map-table td {
+        border: none;
+        border-bottom: 1px solid #eef2f6;
+        padding: 12px 16px;
+        text-align: left;
+        position: relative;
+        padding-left: 110px;
+        min-height: 24px;
+    }
+
+    .product-map-table td:last-child {
+        border-bottom: none;
+    }
+
+    .product-map-table td::before {
+        position: absolute;
+        left: 16px;
+        top: 12px;
+        font-weight: 700;
+        color: #0f75bc;
+    }
+
+    .product-map-table td:nth-child(1)::before {
+        content: "關鍵字";
+    }
+
+    .product-map-table td:nth-child(2)::before {
+        content: "公司";
+    }
+
+    .product-map-table td:nth-child(3)::before {
+        content: "品牌";
+    }
+
+    .product-map-table td:nth-child(4)::before {
+        content: "用途";
+    }
+
+    .product-map-table-wrapper {
+        overflow: visible;
+    }
+}
   </style>
 
   <section class="product-map-section">

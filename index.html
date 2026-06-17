@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Yestop BioAsia</title>
+    <title>產品快速對照表｜客戶關鍵字導航</title>
     <link href="./yestop.ico" rel="icon" type="image/x-icon" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -348,147 +348,305 @@
             </li>
         </ul>
     </div>
-    <section class="product-map-section">
-  <h2>產品快速對照表</h2>
-  <p class="product-map-subtitle">依照客戶詢問關鍵字，快速對應公司、品牌與主要用途</p>
 
-  <div class="product-map-table-wrapper">
-    <table class="product-map-table">
-      <thead>
-        <tr>
-          <th>客戶關鍵字</th>
-          <th>公司</th>
-          <th>品牌</th>
-          <th>用途</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>PLGA、PLLA、PDLLA、PCL</td>
-          <td>Corbion</td>
-          <td>PURASORB</td>
-          <td>長效針劑、醫材</td>
-        </tr>
-        <tr>
-          <td>PDO、PGA、LYDEX</td>
-          <td>BMG</td>
-          <td>BioDegmer</td>
-          <td>縫線、骨固定、醫療膠</td>
-        </tr>
-        <tr>
-          <td>Tween、Span</td>
-          <td>Croda</td>
-          <td>Tween / Span</td>
-          <td>界面活性劑</td>
-        </tr>
-        <tr>
-          <td>Super Refined</td>
-          <td>Croda</td>
-          <td>Super Refined</td>
-          <td>注射級賦形劑</td>
-        </tr>
-        <tr>
-          <td>DSPC、DPPC、DSPE-PEG</td>
-          <td>Avanti</td>
-          <td>Avanti Polar Lipids</td>
-          <td>Liposome、LNP</td>
-        </tr>
-        <tr>
-          <td>補充品</td>
-          <td>WAKI / Care</td>
-          <td>保健品</td>
-          <td>營養補充</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+   
+  
+  <style>
+    :root {
+      --primary: #0f75bc;
+      --primary-dark: #123a5d;
+      --accent: #31a8d8;
+      --bg: #f4f9ff;
+      --text: #263849;
+      --muted: #5f7184;
+      --line: #e6eef6;
+      --card: #ffffff;
+    }
 
-<style>
-  .product-map-section {
-    max-width: 1100px;
-    margin: 48px auto;
-    padding: 32px;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #f4f9ff, #ffffff);
-    box-shadow: 0 12px 35px rgba(20, 70, 120, 0.12);
-    font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  .product-map-section h2 {
-    margin: 0;
-    color: #123a5d;
-    font-size: 28px;
-    font-weight: 700;
-  }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #eef7ff 0%, #ffffff 45%, #f5fbff 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 40px 16px;
+    }
 
-  .product-map-subtitle {
-    margin: 8px 0 24px;
-    color: #5f7184;
-    font-size: 15px;
-  }
-
-  .product-map-table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-  }
-
-  .product-map-table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 16px;
-    background: #ffffff;
-  }
-
-  .product-map-table th {
-    background: #0f75bc;
-    color: #ffffff;
-    padding: 16px;
-    font-size: 15px;
-    text-align: left;
-    white-space: nowrap;
-  }
-
-  .product-map-table td {
-    padding: 16px;
-    color: #263849;
-    font-size: 15px;
-    border-bottom: 1px solid #e6eef6;
-    vertical-align: middle;
-  }
-
-  .product-map-table tbody tr:hover {
-    background: #eef7ff;
-  }
-
-  .product-map-table tbody tr:last-child td {
-    border-bottom: none;
-  }
-
-  .product-map-table td:nth-child(2),
-  .product-map-table td:nth-child(3) {
-    font-weight: 600;
-    color: #0f4f82;
-  }
-
-  @media (max-width: 768px) {
     .product-map-section {
-      margin: 24px 12px;
-      padding: 20px;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 36px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 18px 45px rgba(20, 70, 120, 0.14);
+      border: 1px solid rgba(15, 117, 188, 0.12);
     }
 
-    .product-map-section h2 {
-      font-size: 22px;
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-end;
+      margin-bottom: 26px;
     }
 
-    .product-map-table th,
-    .product-map-table td {
-      padding: 12px;
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #e8f5ff;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(49, 168, 216, 0.15);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: clamp(26px, 4vw, 38px);
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .product-map-subtitle {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .quick-hint {
+      min-width: 210px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #0f75bc, #31a8d8);
+      color: #ffffff;
+      box-shadow: 0 12px 28px rgba(15, 117, 188, 0.24);
+    }
+
+    .quick-hint strong {
+      display: block;
       font-size: 14px;
+      margin-bottom: 4px;
     }
-  }
-</style>
+
+    .quick-hint span {
+      font-size: 13px;
+      opacity: 0.92;
+      line-height: 1.5;
+    }
+
+    .product-map-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .product-map-table {
+      width: 100%;
+      min-width: 860px;
+      border-collapse: collapse;
+      background: var(--card);
+    }
+
+    .product-map-table th {
+      background: linear-gradient(135deg, var(--primary), #1689d3);
+      color: #ffffff;
+      padding: 17px 18px;
+      font-size: 15px;
+      text-align: left;
+      white-space: nowrap;
+      letter-spacing: 0.03em;
+    }
+
+    .product-map-table td {
+      padding: 17px 18px;
+      font-size: 15px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+      line-height: 1.6;
+    }
+
+    .product-map-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .product-map-table tbody tr:hover {
+      background: #eef7ff;
+    }
+
+    .keyword {
+      font-weight: 700;
+      color: #153f63;
+    }
+
+    .company,
+    .brand {
+      font-weight: 700;
+      color: #0f4f82;
+      white-space: nowrap;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 9px;
+      margin: 2px 4px 2px 0;
+      border-radius: 999px;
+      background: #edf7ff;
+      color: #0f5f98;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .note-box {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: #f7fbff;
+      border: 1px solid #dceefc;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      .product-map-section {
+        padding: 22px 16px;
+        border-radius: 22px;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .quick-hint {
+        margin-top: 18px;
+      }
+
+      .product-map-table th,
+      .product-map-table td {
+        padding: 13px 14px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <section class="product-map-section">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Product Keyword Map</div>
+        <h1>產品快速對照表</h1>
+        <p class="product-map-subtitle">依照客戶詢問關鍵字，快速對應公司、品牌與主要用途。</p>
+      </div>
+      <div class="quick-hint">
+        <strong>業務記憶法</strong>
+        <span>先聽關鍵字，再連到公司與品牌，最後確認應用與規格文件。</span>
+      </div>
+    </div>
+
+    <div class="product-map-table-wrapper">
+      <table class="product-map-table">
+        <thead>
+          <tr>
+            <th>客戶關鍵字</th>
+            <th>公司</th>
+            <th>品牌</th>
+            <th>用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="keyword">PLGA、PLLA、PDLLA、PCL</td>
+            <td class="company">Corbion</td>
+            <td class="brand">PURASORB</td>
+            <td><span class="tag">長效針劑</span><span class="tag">醫材</span></td>
+          </tr>
+          <tr>
+            <td class="keyword">PDO、PGA、LYDEX</td>
+            <td class="company">BMG</td>
+            <td class="brand">BioDegmer</td>
+            <td><span class="tag">縫線</span><span class="tag">骨固定</span><span class="tag">醫療膠</span></td>
+          </tr>
+          <tr>
+            <td class="keyword">Tween、Span</td>
+            <td class="company">Croda</td>
+            <td class="brand">Tween / Span</td>
+            <td><span class="tag">界面活性劑</span></td>
+          </tr>
+          <tr>
+            <td class="keyword">Super Refined</td>
+            <td class="company">Croda</td>
+            <td class="brand">Super Refined</td>
+            <td><span class="tag">注射級賦形劑</span></td>
+          </tr>
+          <tr>
+            <td class="keyword">DSPC、DPPC、DSPE-PEG、PEG-Lipid</td>
+            <td class="company">Avanti</td>
+            <td class="brand">Avanti Polar Lipids</td>
+            <td><span class="tag">Liposome</span><span class="tag">LNP</span><span class="tag">mRNA</span></td>
+          </tr>
+          <tr>
+            <td class="keyword">PVA、GOHSENOL、ODF、Microsphere</td>
+            <td class="company">Mitsubishi Chemical</td>
+            <td class="brand">GOHSENOL™ EG</td>
+            <td><span class="tag">ODF</span><span class="tag">微球</span><span class="tag">黏合劑</span><span class="tag">眼藥水</span></td>
+          </tr>
+          <tr>
+            <td class="keyword">PEG3350、PEG4000、Macrogol</td>
+            <td class="company">Clariant</td>
+            <td class="brand">Polyglykol®</td>
+            <td><span class="tag">緩瀉劑</span><span class="tag">PEG API</span></td>
+          </tr>
+          <tr>
+            <td class="keyword">VitiPure、LEX、Superior</td>
+            <td class="company">Clariant</td>
+            <td class="brand">VitiPure®</td>
+            <td><span class="tag">增溶劑</span><span class="tag">乳化劑</span><span class="tag">注射級輔料</span></td>
+          </tr>
+          <tr>
+            <td class="keyword">Motusflex</td>
+            <td class="company">Clariant</td>
+            <td class="brand">Motusflex®</td>
+            <td><span class="tag">流變改質</span><span class="tag">增稠</span><span class="tag">噴霧製劑</span></td>
+          </tr>
+          <tr>
+            <td class="keyword">補充品、補循素、HLP</td>
+            <td class="company">WAKI / Care</td>
+            <td class="brand">保健品</td>
+            <td><span class="tag">營養補充</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-box">
+      使用建議：客戶第一次詢問時，先用關鍵字定位產品線；確認應用後，再進一步查詢規格書、COA、DMF、藥典符合性與供貨狀態。
+    </div>
+  </section>
+
     <p>Corbion: 醫療器材常用可降解高分子-PLLA,PLDLLA,PLGA,PCL; 藥品常用可降解高分子-PDLLA, PLGA</p><br>
     <p>BMG: PGA, PLLA, LCL, PDO</p><br>
     <p>CRODA: Span, Tween, SuperRefined, PEG, Cholesterol, DMPC, DPPC, DSPC, DOPC, POPC, DEPC, DOPE, DOPS, DMPG, DPPG, DSPG, Tricaprylin, DMG-PEG2000, DSPE-PEG2000, DMPR-PEG2000</p><br>
